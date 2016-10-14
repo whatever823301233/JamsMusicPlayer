@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sliding_menu_array">
+        <item>艺术家</item>
+        <item>专辑艺术家</item>
+        <item>唱片</item>
+        <item>歌曲</item>
+        <item>播放列表</item>
+        <item>类别</item>
+        <item>文件夹</item>
+        <item>设置</item>
+    </string-array>
+    
+    <string-array name="animations">
+        <item >滑开</item>
+        <item >缩小和滑走</item>
+        <item >深度变压器</item>
+    </string-array>
+    
+    <string-array name="enable_disable">
+        <item >启用</item>
+        <item >关闭</item>
+    </string-array>
+    
+    <string-array name="headphones_unplug_actions">
+        <item >Do nothing</item>
+        <item >Pause music playback</item>
+    </string-array>
+    
+    <string-array name="album_art_sources">
+        <item >Prefer embedded art</item>
+        <item >Prefer folder art</item>
+        <item >Use embedded art only</item>
+        <item >Use folder art only</item>
+    </string-array>
+    
+    <string-array name="scrobbling_options">
+        <item>Don\'t Scrobble</item>
+        <item>Simple Last.fm Scrobbler</item>
+        <item>ScrobbleDroid</item>
+    </string-array>
+    
+    <string-array name="show_more_menu">
+        <item>Go to artist</item> 
+        <item>Go to album artist</item> 
+        <item>Go to album</item> 
+        <item>Go to genre</item> 
+    </string-array>
+    
+    <string-array name="widget_color_options">
+        <item>Light</item> 
+        <item>Dark</item> 
+    </string-array>
+
+</resources>

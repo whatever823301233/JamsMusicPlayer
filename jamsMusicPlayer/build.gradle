@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.jams.music.player"
+        minSdkVersion 14
+        targetSdkVersion 23
+
+        //RenderScript backward compatibility for guassian blurs.
+        renderscriptTargetApi 23
+        renderscriptSupportModeEnabled true
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+
+    dexOptions{
+        javaMaxHeapSize "2g"
+    }
+
+    /**
+     * Bug in Gradle v0.7.1. The LICENSE and NOTICE files in the Apache Commons
+     * library jars need to be excluded or the project won't compile/build.
+     */
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+/*repositories {
+    //mavenCentral()
+    jcenter()
+}*/
+
+dependencies {
+    compile project(':licensesdialoglibrary')
+    compile project(':quickScroll')
+    compile project(':velocityviewpagerlibrary')
+    compile project(':dragsortlistviewlibrary')
+    compile project(':viewpagerindicatorlibrary')
+    compile project(':circularImageView')
+    compile project(':picasso')
+    compile files('libs/android-async-http-1.4.2-66-g4b6eb97.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/commons-lang3-3.1.jar')
+    compile files('libs/commons-logging.jar')
+    compile files('libs/dashclock-api-r2.0.jar')
+    compile files('libs/google-http-client-1.16.0-rc.jar')
+    compile files('libs/google-http-client-android-1.16.0-rc.jar')
+    compile files('libs/jaudiotagger-2.0.4-20111207.115108-15.jar')
+    compile files('libs/com.haarman.listviewanimations-2.6.0.jar')
+    compile 'com.nineoldandroids:library:2.4.0'
+    //compile files('libs/renderscript-v8.jar')
+    compile 'com.android.support:support-v4:23+'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.google.android.gms:play-services:4.0.30'
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+}
